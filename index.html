@@ -2,102 +2,173 @@
 <html lang="th">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>ของขวัญวันเกิด 🌻</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>ของขวัญวันเกิดของเธอ 🌻</title>
 <style>
-*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;background:linear-gradient(160deg,#fff7cf,#ffe8b5);color:#5a3b25;min-height:100vh;overflow-x:hidden}
-.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:24px;position:relative}.page.active{display:flex}
-.card{width:min(92vw,650px);background:#fffdf8eF;border-radius:30px;padding:34px 24px;text-align:center;box-shadow:0 18px 60px #9b672533;position:relative;z-index:2}
-h1{font-size:clamp(28px,7vw,48px);margin:10px 0 18px;color:#e07a22}p{font-size:clamp(17px,4.5vw,21px);line-height:1.9;margin:10px 0}
-button{border:0;border-radius:999px;padding:14px 25px;font-size:18px;font-weight:700;background:#f6a623;color:white;box-shadow:0 7px 18px #d27b2438;cursor:pointer;margin-top:18px}button:disabled{opacity:.45;cursor:not-allowed}
-.sunflower{font-size:64px;animation:sway 2.8s ease-in-out infinite}.cute{font-size:72px}
-@keyframes sway{50%{transform:rotate(5deg) translateY(-4px)}}@keyframes pop{from{transform:scale(.6);opacity:0}to{transform:scale(1);opacity:1}}
-.pop{animation:pop .7s ease both}
-.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:5}.piece{position:absolute;top:-20px;font-size:22px;animation:fall 3.2s linear forwards}
-@keyframes fall{to{transform:translateY(110vh) rotate(600deg);opacity:.2}}
-.cake{font-size:105px;margin:8px}.candles{display:flex;justify-content:center;gap:8px;min-height:75px;align-items:end}.candle{font-size:38px;filter:grayscale(1);transition:.25s;cursor:pointer}.candle.lit{filter:none;transform:translateY(-5px)}
-.message{min-height:65px;font-size:19px;font-weight:700;color:#d66f1d;margin-top:10px}
-.letter{text-align:left;background:#fff8e9;border-radius:22px;padding:22px;margin-top:18px;border:2px dashed #f1b75b}.letter strong{display:block;text-align:center;font-size:25px;color:#df7421;margin-bottom:12px}
-.final{font-size:clamp(22px,5.5vw,31px);font-weight:800;line-height:1.8}.flower-row{font-size:44px;letter-spacing:5px;margin:12px}
-.small{font-size:14px;opacity:.65;margin-top:18px}
+:root{--yellow:#ffd95a;--orange:#f29b38;--brown:#633d2b;--cream:#fffaf0}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,"Noto Sans Thai",sans-serif;color:var(--brown);background:linear-gradient(145deg,#fff7c9 0%,#ffe9b7 45%,#fffdf4 100%);overflow-x:hidden}
+.page{min-height:100vh;display:none;align-items:center;justify-content:center;padding:24px 16px;position:relative}
+.page.active{display:flex}
+.card{width:min(94vw,680px);background:#fffdf8ee;border:3px solid #fff;outline:1px solid #f3ca68;border-radius:32px;padding:30px 20px;text-align:center;box-shadow:0 22px 70px #8d5a2b26;position:relative;z-index:2}
+h1{font-size:clamp(28px,8vw,48px);margin:10px 0;color:#e47c27}
+p{font-size:clamp(17px,4.7vw,21px);line-height:1.9;margin:10px 0}
+button{border:0;border-radius:999px;padding:14px 25px;font-size:18px;font-weight:800;background:linear-gradient(135deg,#f7a42d,#f08055);color:#fff;box-shadow:0 8px 20px #d47c3040;cursor:pointer;margin-top:18px}
+button:active{transform:scale(.97)}
+.music{position:fixed;right:14px;top:14px;z-index:20;border:2px solid #fff;background:#ffffffdd;color:#c56d25;padding:9px 14px;font-size:14px;margin:0}
+.sun{font-size:62px;display:inline-block;animation:sway 2.7s ease-in-out infinite}
+@keyframes sway{50%{transform:rotate(6deg) translateY(-5px)}}
+.cute{font-size:70px;line-height:1}
+.sparkle{font-size:25px;letter-spacing:5px}
+.cake{font-size:110px;line-height:1;margin:4px}
+.candles{display:flex;justify-content:center;gap:6px;min-height:75px;align-items:end}
+.candle{font-size:40px;cursor:pointer;transition:.25s;display:inline-block;filter:grayscale(1)}
+.candle.lit{filter:none;transform:translateY(-5px) scale(1.08)}
+.message{min-height:70px;padding:10px;color:#dc7422;font-size:19px;font-weight:800}
+.letter{text-align:left;background:#fff7e4;border-radius:24px;padding:20px;border:2px dashed #efb34e;box-shadow:inset 0 0 25px #f0b74c12}
+.letter strong{display:block;text-align:center;font-size:clamp(23px,6vw,30px);color:#df7421;margin-bottom:12px}
+.final{font-size:clamp(22px,6vw,32px);font-weight:900;line-height:1.85;color:#d76e2b}
+.flowers{font-size:46px;letter-spacing:2px}
+.boy{position:relative;width:150px;height:165px;margin:0 auto 8px}
+.head{position:absolute;left:37px;top:18px;width:76px;height:70px;background:#ffd5a6;border-radius:48% 48% 45% 45%;border:3px solid #5b3b2b}
+.hair{position:absolute;left:33px;top:7px;font-size:58px;z-index:2;transform:rotate(-5deg)}
+.eye{position:absolute;top:47px;width:7px;height:7px;background:#333;border-radius:50%;z-index:3}.e1{left:58px}.e2{left:87px}
+.mouth{position:absolute;left:69px;top:62px;font-size:16px;z-index:3}
+.shirt{position:absolute;left:47px;top:87px;width:58px;height:53px;background:#ffd84d;border:3px solid #5b3b2b;border-radius:14px 14px 9px 9px}
+.shorts{position:absolute;left:47px;top:135px;width:58px;height:25px;background:#e85b58;border:3px solid #5b3b2b;border-radius:5px}
+.flower{position:absolute;font-size:55px}.f1{left:0;top:70px}.f2{right:0;top:50px}
+.small{font-size:13px;opacity:.65;margin-top:15px}
+.fade{animation:fade .65s ease both}@keyframes fade{from{opacity:0;transform:translateY(12px) scale(.98)}to{opacity:1;transform:none}}
+.confetti{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:30}
+.piece{position:absolute;top:-30px;font-size:24px;animation:fall 3.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.15}}
+#yt{position:fixed;left:-20px;bottom:-20px;width:2px;height:2px;opacity:.01;pointer-events:none}
 </style>
 </head>
 <body>
 
+<!-- เพลงจาก YouTube ของ PURPEECH: จะเริ่มหลังจากกดปุ่มครั้งแรก เพื่อให้มือถือยอมให้เล่นเสียง -->
+<div id="yt"></div>
+<button id="musicBtn" class="music" onclick="toggleMusic()">🎵 เพลง: เปิด</button>
+
 <section id="p1" class="page active">
-  <div class="card pop">
-    <div class="sunflower">🌻</div><div class="cute">🥺</div>
+  <div class="card fade">
+    <div class="sparkle">✨ 🌻 ✨</div>
+    <div class="sun">🌻</div>
+    <div class="cute">🥺</div>
     <h1>เธอลองเปิดอ่านดูสิ 😁</h1>
     <p>มีอะไรเล็ก ๆ น้อย ๆ อยากให้เธอเปิดดูนะ 💛</p>
-    <button onclick="go(2)">เปิดดู 🎁</button>
+    <button onclick="startAndGo(2)">เปิดดู 🎁✨</button>
   </div>
 </section>
 
 <section id="p2" class="page">
   <div class="card">
-    <div class="sunflower">🌻</div>
+    <div class="sun">🌻</div>
     <div class="cake">🎂</div>
     <div id="candles" class="candles">
-      <span class="candle" onclick="light(0)">🕯️</span><span class="candle" onclick="light(1)">🕯️</span><span class="candle" onclick="light(2)">🕯️</span><span class="candle" onclick="light(3)">🕯️</span><span class="candle" onclick="light(4)">🕯️</span>
+      <span class="candle" onclick="lightCandle(0)">🕯️</span>
+      <span class="candle" onclick="lightCandle(1)">🕯️</span>
+      <span class="candle" onclick="lightCandle(2)">🕯️</span>
+      <span class="candle" onclick="lightCandle(3)">🕯️</span>
+      <span class="candle" onclick="lightCandle(4)">🕯️</span>
     </div>
-    <div id="cakeMsg" class="message">กดปักเทียนเล่มแรกเลยนะ 🥰🕯️</div>
-    <button id="blow" style="display:none" onclick="blow()">เป่าเทียน 🎂💨</button>
+    <div id="cakeMsg" class="message">เทียนเล่มแรก 🕯️ ปักอีกอันสิ 😊</div>
+    <button id="blow" style="display:none" onclick="blow()">เป่าเทียนสิ 🎂💨</button>
+    <div class="small">ปักเทียนตามลำดับนะ 😆💛</div>
   </div>
 </section>
 
 <section id="p3" class="page">
-  <div class="card">
-    <div class="sunflower">🌻</div>
+  <div class="card fade">
+    <div class="sun">🌻</div>
     <div class="letter">
       <strong>สุขสันต์วันเกิดนะเธอ 🎂💛</strong>
       <p>เธออายุเพิ่มขึ้นอีกปีแล้ว แต่สำหรับเค้า เธอยังน่ารักเหมือนเดิมเลย 🥰💖</p>
       <p>ขอให้ปีนี้เป็นปีที่เต็มไปด้วยความสุข สิ่งดีๆ และความฝันที่เธออยากทำ 🌻✨</p>
-      <p>ขอให้เธอมีแรงกายแรงใจ พร้อมสู้กับทุกเรื่องที่เข้ามา 💪💖</p>
+      <p>ขอให้เธอมีแรงกายแรงใจ พร้อมสู้กับทุกเรื่องที่เข้ามา 💪🏻💖</p>
       <p>และที่สำคัญ...ขอให้เค้ายังได้อยู่ข้างๆ เธอในทุกวันเกิดต่อจากนี้ไป 🥹❤️</p>
       <p>เพราะสำหรับเค้า แค่ได้อยู่กับเธอ ก็คือของขวัญที่ดีที่สุดแล้ว 🎁💖</p>
     </div>
-    <button onclick="go(4)">ไปดูของขวัญชิ้นสุดท้าย 🌻</button>
+    <button onclick="go(4)">ไปดูของขวัญชิ้นสุดท้าย 🌻✨</button>
   </div>
 </section>
 
 <section id="p4" class="page">
-  <div class="card pop">
-    <div style="font-size:100px">🌻🧒🏻🌻</div>
-    <div class="flower-row">🌻 🌻 🌻</div>
+  <div class="card fade">
+    <div class="boy">
+      <div class="hair">🖤</div><div class="head"><span class="eye e1"></span><span class="eye e2"></span><span class="mouth">⌣</span></div>
+      <div class="shirt"></div><div class="shorts"></div>
+      <div class="flower f1">🌻</div><div class="flower f2">🌻</div>
+    </div>
+    <div class="flowers">🌻 ✨ 🌻</div>
     <div class="final">“จริง ๆ แล้วของขวัญที่เราอยากให้ที่สุด<br>คืออยากให้เธอมีความสุขในทุก ๆ วันนะ ❤️”</div>
     <p>สุขสันต์วันเกิดนะคนสำคัญ 🥰🎂🌻</p>
-    <div class="small">ทำเว็บนี้ให้เธอโดยเฉพาะ 💛</div>
+    <div class="small">ของขวัญเล็ก ๆ ชิ้นนี้ ตั้งใจทำให้เธอโดยเฉพาะ 💛</div>
   </div>
   <div id="confetti" class="confetti"></div>
 </section>
 
+<script src="https://www.youtube.com/iframe_api"></script>
 <script>
-let current=1, nextCandle=0;
+const VIDEO_ID="HBOz7XiKl-s";
+let player, musicStarted=false, muted=false, nextCandle=0;
+
+function onYouTubeIframeAPIReady(){
+  player=new YT.Player('yt',{
+    width:'2',height:'2',videoId:VIDEO_ID,
+    playerVars:{autoplay:0,controls:0,playsinline:1,loop:1,playlist:VIDEO_ID,rel:0},
+    events:{onReady:()=>{}}
+  });
+}
+function startAndGo(n){
+  if(player && player.playVideo){
+    player.setVolume(22);
+    player.playVideo();
+    musicStarted=true;
+  }
+  go(n);
+}
+function toggleMusic(){
+  if(!player)return;
+  if(!musicStarted){player.setVolume(22);player.playVideo();musicStarted=true;return}
+  if(muted){player.unMute();player.setVolume(22);muted=false;document.getElementById('musicBtn').textContent='🎵 เพลง: เปิด'}
+  else{player.mute();muted=true;document.getElementById('musicBtn').textContent='🔇 เพลง: ปิด'}
+}
+function go(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p'+n).classList.add('active');
+  if(n===4)makeConfetti();
+}
 const msgs=[
 "เทียนเล่มแรก 🕯️ ปักอีกอันสิ 😊",
 "เย่ ๆ 🎉 ปักอีกอันสิ!",
-"ใกล้จะถึงเล่มสุดท้ายแล้วนะ 🥹🕯️",
+"ก่อนจะถึงเล่มสุดท้ายแล้วนะ 🥹🕯️",
 "อีกเล่มเดียวแล้ววว! 💖✨",
 "เป่าเทียนสิ 🎂💨"
 ];
-function go(n){document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));document.getElementById('p'+n).classList.add('active');current=n;if(n===4)confetti();}
-function light(i){
- if(i!==nextCandle)return;
- document.querySelectorAll('.candle')[i].classList.add('lit');
- document.getElementById('cakeMsg').textContent=msgs[i];
- nextCandle++;
- if(nextCandle===5)document.getElementById('blow').style.display='inline-block';
+function lightCandle(i){
+  if(i!==nextCandle)return;
+  document.querySelectorAll('.candle')[i].classList.add('lit');
+  const m=document.getElementById('cakeMsg');
+  m.textContent=msgs[i];m.classList.remove('fade');void m.offsetWidth;m.classList.add('fade');
+  nextCandle++;
+  if(nextCandle===5)document.getElementById('blow').style.display='inline-block';
 }
 function blow(){
- document.getElementById('cakeMsg').textContent="เย่ ๆ 🎉 เก่งที่สุดเลย! 🥰💖";
- document.getElementById('blow').style.display='none';
- setTimeout(()=>go(3),1300);
+  document.getElementById('cakeMsg').textContent="เย่ ๆ 🎉 เก่งที่สุดเลย! 🥰💖";
+  document.getElementById('blow').style.display='none';
+  document.querySelectorAll('.candle').forEach(c=>c.classList.remove('lit'));
+  setTimeout(()=>go(3),1400);
 }
-function confetti(){
- const box=document.getElementById('confetti');
- ["🌻","💛","✨","🎉","❤️","🌟"].forEach((e)=>{
-   for(let i=0;i<10;i++){let s=document.createElement('span');s.className='piece';s.textContent=e;s.style.left=Math.random()*100+"%";s.style.animationDelay=Math.random()*1.5+"s";box.appendChild(s);}
- });
+function makeConfetti(){
+  const box=document.getElementById('confetti');box.innerHTML='';
+  ["🌻","💛","✨","🎉","❤️","🌟"].forEach(e=>{
+    for(let i=0;i<9;i++){
+      const s=document.createElement('span');s.className='piece';s.textContent=e;
+      s.style.left=Math.random()*100+"%";s.style.animationDelay=Math.random()*1.2+"s";box.appendChild(s);
+    }
+  });
 }
 </script>
 </body>
